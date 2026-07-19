@@ -17,7 +17,7 @@ body{
 
 .container{
 
-    background:white;
+    background:#ffffff;
 
     width:90%;
     max-width:500px;
@@ -110,7 +110,7 @@ button:hover{
     width: 90%;
     max-width: 500px;
 
-    background: white;
+    background: #ffd1dc;
     padding: 10px;
     border-radius: 15px;
 
