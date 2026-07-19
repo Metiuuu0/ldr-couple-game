@@ -1,16 +1,25 @@
-let currentAudio = null;
+const player = document.getElementById("player");
+const playerContainer = document.getElementById("player-container");
 
 function playAudio(name){
 
-    if(currentAudio){
+    console.log("Playing:", name);
 
-        currentAudio.pause();
-        currentAudio.currentTime = 0;
+    player.src = `audio/${name}.m4a`;
 
-    }
+    playerContainer.classList.remove("hidden");
+    playerContainer.classList.add("show");
 
-    currentAudio = new Audio("audio/" + name + ".mp3");
+    console.log(playerContainer.className);
 
-    currentAudio.play();
-
+    player.play();
 }
+
+
+player.addEventListener("ended", () => {
+
+    player.currentTime = 0;
+    playerContainer.classList.remove("show");
+    playerContainer.classList.add("hidden");
+
+});
